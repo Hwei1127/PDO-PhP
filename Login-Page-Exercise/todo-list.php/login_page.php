@@ -47,6 +47,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 <div class="card">
     <h2>Login</h2>
 
+    <hr>
     <form method="POST" action="">
         <label>Email:</label>
         <input type="email" name="email" required><br><br>
@@ -74,6 +75,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     h2{
         margin: 0;
         padding: 5px;
+        text-align: center;
     }
 
     form{

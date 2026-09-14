@@ -11,7 +11,7 @@
             <div>
                 <a href="./login_page.php">Login</a>
                 <a href="./signup_page.php">Sign Up</a>
-</div>
+            </div>
 </div>    
     </div>
 </body>

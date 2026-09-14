@@ -51,26 +51,83 @@ echo "Successfully registered";
     <title>Sign Up</title>
 </head>
 <body>
-<card>
-    <h2>Sign Up a New Account</h2>
+<div class="card">
+    <h2>Sign Up a New Accont</h2>
+
+    <hr>
 
     <form method="POST" action="">
-        <label>Name</label>
+        <label>Name</label><br>
         <input type="text" name="name" required><br><br>
-
-        <label>Email Address</label>
+    
+        <label>Email address</label><br>
         <input type="email" name="email" required><br><br>
 
-        <label>Password</label>
+        <label>Password</label><br>
         <input type="password" name="password" required><br><br>
 
-        <label>Confirm Password:</label>
+        <label>Confirm Password</label><br>
         <input type="password" name="confirm_password" required><br><br>
-        
-        <a href="./home_page.php"><button type="submit">Sign Up</button></a>
+
+        <button type="submit">Sign Up</button>
     </form>
-</card>
-<a href="./index.php">Go back</a>
+</div>
+<div class="link">
+        <a href="./index.php">Go back</a>
+<div>
 </body>
+
+<style>
+    .card{
+        padding:30px;
+        width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin: auto;
+    }
+
+    h2{
+        margin: 0;
+        padding: 5px;
+        text-align: center;
+    }
+
+
+    form{
+        padding: 5px;
+    }
+
+    label{
+        font-size: 16px;
+        margi-bottom: 5px;
+    }
+
+    input{
+        border-radius: 5px ;
+        border:1px solid #ddd;
+        width: 95%;
+        padding:5px;
+        box-shadow: 0px;
+    }
+
+    button{
+        background-color:#007fff;
+        border: 0;
+        color: white;
+        font-size:16px;
+        width: 100%;
+        padding:10px;
+        border-radius: 5px;
+    }
+
+    .link{
+        text-align:center;
+        padding:20px;
+    }
+
+    a{
+        color:#007fff;
+    }
+</style>
 </html>
 

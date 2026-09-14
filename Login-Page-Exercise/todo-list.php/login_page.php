@@ -3,7 +3,7 @@
 session_start();
 
 if(isset($_SESSION['authenticated']) && $_SESSION['authenticated'] ==true){
-    header('Location:index.php');
+    header('Location:./index.php');
     exit;
 }
 
@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     if($user &&password_verify($password, $user->password)){
         $_SESSION['authenticated']=true;
         $_SESSION['email'] =$user ->email;
-        header('Location:index.php');
+        header('Location:./main_menu.php');
         exit;
     }else{
         echo"Invaild email or password";
@@ -37,7 +37,6 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,24 +44,71 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     <title>Login</title>
 </head>
 <body>
-<card>
-    <h2>Login To Your Account</h2>
-
-    <hr>
+<div class="card">
+    <h2>Login</h2>
 
     <form method="POST" action="">
-        <label>Email address</label>
+        <label>Email:</label>
         <input type="email" name="email" required><br><br>
 
-        <label>Password</label>
+        <label>Password:</label>
         <input type="password" name="password" required><br><br>
 
-        <a href="./home_page.php"><button type="submit">Login</button></a>
+        <button type="submit">Login</button>
     </form>
-</card>
-
-<a href="./index.php">Go back</a>
-
+</div>
+<div class="link">
+        <a href="./index.php">Go back</a>
+<div>
 </body>
-</html>
 
+<style>
+    .card{
+        padding:30px;
+        width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin: auto;
+    }
+
+    h2{
+        margin: 0;
+        padding: 5px;
+    }
+
+    form{
+        padding: 5px;
+    }
+
+    label{
+        font-size: 16px;
+        margi-bottom: 5px;
+    }
+
+    input{
+        border-radius: 5px ;
+        border:1px solid #ddd;
+        width: 95%;
+        padding:5px;
+        box-shadow: 0px;
+    }
+
+    button{
+        background-color:#007fff;
+        border: 0;
+        color: white;
+        font-size:16px;
+        width: 100%;
+        padding:10px;
+        border-radius: 5px;
+    }
+    .link{
+        text-align:center;
+        padding:20px;
+    }
+
+    a{
+        color:#007fff;
+    }
+    </style>
+</html>
